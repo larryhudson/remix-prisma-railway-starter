@@ -8,19 +8,18 @@ This button below will create a new app on [Railway](https://railway.app) with P
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Flarryhudson%2Fremix-prisma-railway-starter&plugins=postgresql&referralCode=-msDiJ)
 
-## Setting up Prisma
+## Getting started with Remix, Railway and Prisma
 
-On your local machine:
-- Make sure you're running postgres
-- Create a new database on postgres (I like using [TablePlus](https://tableplus.com) on macOS)
-- Copy .env.sample to .env
-- Adjust the database URL in .env to use your computer username and password, and use the db name you created above.
-- Add a model to prisma/schema.prisma
-- Create a prisma migration
-    - Run npx prisma migrate dev
-- Commit your changes to the Git repo
-
-You don't need to worry about setting up Postgres on Railway - if you enable the 'PostgreSQL' plugin, it will automatically set the `DATABASE_URL` environment variable that Prisma looks for.
+1. Click the 'Deploy on Railway' button above. This will create a new Railway app, and also create a new repo in your GitHub account that uses this repo as a template.
+2. Clone your newly created repo onto your local machine
+3. On your local machine, create a new postgres database
+    1. On Mac, you can install Postgres with homebrew by running `brew install postgres` and then run `brew services start postgresql` to start it
+    2. You can use [TablePlus](https://tableplus.com) to create a new database
+4. In the repo folder, copy .env.sample to .env
+5. In .env, adjust the database URL to use your computer username and password, and the name of the database you created in step 2 above.
+6. Add models to `prisma/schema.prisma`.
+7. Run `npm migrate:dev` to create a prisma migration
+8. Commit your changes to the new repo and push. When you push, Railway will create a new deployment.
 
 ## Development
 
