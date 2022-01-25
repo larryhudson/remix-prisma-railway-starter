@@ -4,7 +4,7 @@
 
 ## Use this as a starter for a Railway app
 
-This button below
+This button below will create a new app on [Railway](https://railway.app) with PostgreSQL pre-configured, ready for you to add models to Prisma and get going.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Flarryhudson%2Fremix-prisma-railway-starter&plugins=postgresql&referralCode=-msDiJ)
 
